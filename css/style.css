@@ -1,0 +1,175 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+}
+
+.head-bar{
+    background-color: #0084FD;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+}
+
+
+
+.menu{
+    color: white;
+    font-size: 30px;
+
+}
+
+
+.container{
+    width: 100%;
+    
+}
+
+.row{
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    background-color: white;
+}
+
+
+.col{
+    width: 100%;
+
+    background-color: #B5DDFF ;
+    border-color: 2px solid transparent;
+    border-radius: 1em;
+    color: #0084FD;
+    text-align: center;
+    padding: 2em 4em;
+
+    margin: 1em auto;
+}
+.doublecol{
+    width: 100%;
+
+    background-color: #B5DDFF ;
+    border-radius: 1em;
+    color: #0084FD;
+    text-align: left;
+    padding: 2em 4em 0 4em;
+
+    margin: 1em auto;
+}
+
+
+.col>i{
+    font-size: 50px;
+    margin-bottom: 0.5em;
+    color: #0084FD;
+}
+
+.col>h3{
+    color: #0084FD;
+}
+
+
+h2,
+h3{
+    margin: 0.5em;
+}
+
+.col,.doublecol>p{  
+    margin: 1em auto;
+    color: black;
+    line-height: 200%;
+}
+
+.doublecol img{
+    width: 100%;
+
+
+
+}
+
+
+
+
+.strat-planning{
+    color: white;
+    width: 100%;
+    height: min-content;
+
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    background-color: white;
+    background-color: #9792E4;
+    
+}
+.strat-planning img{
+    width: 100%;
+}
+
+.strat-planning h2{
+    font-size: 40px;
+
+}
+.strat-planning h2,p{
+    margin: 2em auto;
+    line-height: 200%;
+}
+
+
+
+
+
+
+.purplecol{
+    width: 100%;
+
+    background-color: white ;
+    border-color: 2px solid transparent;
+    border-radius: 1em;
+    color: black;
+    text-align: center;
+    padding: 2em 4em;
+
+    margin: 1em auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:480px) {
+    .container{
+        background-color: orangered;
+    }
+    
+}
+
+@media screen and (min-width:480px) and (max-width:768px) {
+    .container{
+        background-color: yellow;
+    }
+    
+}
+
+@media screen and (min-width:768px) {
+    .container{
+        background-color: green;
+    }
+
+    
+}
