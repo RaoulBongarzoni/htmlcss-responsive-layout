@@ -1,3 +1,10 @@
+
+
+/* ************GENERALI**************** */
+
+:root{
+    --secondary-color: #9792E4;
+}
 *{
     box-sizing: border-box;
     margin: 0;
@@ -7,14 +14,25 @@ body{
     font-family: sans-serif;
 }
 
+.container{
+    max-width: 600px;
+    margin: 0 auto;  
+}
+
+/* **************HEADER************** */
 .head-bar{
     background-color: #0084FD;
+/*     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em; */
+}
+#head-wrapper{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1em 2em;
 }
-
 
 
 .menu{
@@ -24,67 +42,63 @@ body{
 }
 
 
-.container{
-    width: 100%;
+/* **************HEADER************** */
+
+
+#cards{
+    display: flex;
+    flex-direction: column;
     
 }
 
-.row{
-    display: flex;
-    flex-direction: column;
-    padding: 2em;
-    background-color: white;
-}
 
-
-.col{
+.card{
     width: 100%;
 
     background-color: #B5DDFF ;
     border-color: 2px solid transparent;
-    border-radius: 1em;
+    border-radius: 2em;
     color: #0084FD;
     text-align: center;
-    padding: 2em 4em;
+    padding: 1.5em 1em;
 
     margin: 1em auto;
 }
-.doublecol{
+.doublecard{
     width: 100%;
 
     background-color: #B5DDFF ;
-    border-radius: 1em;
+    border-radius: 2em;
     color: #0084FD;
     text-align: left;
     padding: 2em 4em 0 4em;
 
     margin: 1em auto;
+    display: flex;
+    flex-direction: column;
 }
 
-
-.col>i{
+.doublecard>img{
+    width: 100%;
+}
+.card>i{
     font-size: 50px;
     margin-bottom: 0.5em;
     color: #0084FD;
 }
 
-.col>h3{
+.card>h3{
     color: #0084FD;
 }
 
 
-h2,
-h3{
-    margin: 0.5em;
-}
-
-.col,.doublecol>p{  
+.card,.doublecard p{  
     margin: 1em auto;
     color: black;
     line-height: 200%;
 }
 
-.doublecol img{
+.doublecard img{
     width: 100%;
 
 
@@ -102,8 +116,8 @@ h3{
     display: flex;
     flex-direction: column;
     padding: 2em;
-    background-color: white;
-    background-color: #9792E4;
+
+    
     
 }
 .strat-planning img{
@@ -137,6 +151,66 @@ h3{
     margin: 1em auto;
 }
 
+.purplecol2 img{
+    width: 100%;
+
+}
+
+
+
+
+
+.testimonial-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 2em;
+}
+
+.testimonials{
+    text-align: center;
+    color: black;
+}
+.testimonials h3{
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: x-large;
+    margin-top: 2em;
+}
+.testimonial-card{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 4em;
+    text-align: center;
+    padding: 4rem;
+    margin-bottom: 2rem;
+    align-items: center;
+
+}
+.avatar{
+    overflow: hidden;
+    border-radius: 50%; 
+    width: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar img{
+    height: 100%
+
+}
+.testimonial-card p::before{
+    content: "\f10d" " " ;
+    font: normal normal normal 14px/1 FontAwesome;
+}
+.testimonial-card p::after{
+    content: " \f10e" ;
+    font: normal normal normal 14px/1 FontAwesome;
+}
 
 
 
@@ -144,32 +218,98 @@ h3{
 
 
 
+.numbered-cards{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.num-card{
+    background-color: white;
+    border-radius: 3em;
+    color: var(--secondary-color);
+    padding: 2em;
+    margin: 2em;
+}
 
 
 
+/* utilities */
 
+.g-10{ gap: 10px;}
+.g-16{gap: 16px;}
 
+.p-32{
+    padding: 0 32px;
+}
+
+.bg-secondary-color{
+    background-color: var(--secondary-color);
+}
+.d-flex{
+    display: flex;
+}
 
 
 
 @media screen and (max-width:480px) {
-    .container{
+/*     .container{
         background-color: orangered;
     }
-    
+     */
 }
 
 @media screen and (min-width:480px) and (max-width:768px) {
-    .container{
+/*     .container{
         background-color: yellow;
-    }
+    } */
     
 }
 
 @media screen and (min-width:768px) {
     .container{
-        background-color: green;
+/*         background-color: green; */
+        max-width: 1200px;
+        
     }
 
-    
+    #cards{
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .card{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .doublecard{
+        width: 60%;
+        flex-direction: row;   
+    }
+
+    .doublecard>div{
+        height: 100%;
+        width: 50%;
+    }
+
+    .doublecard img{
+        width: 50%;
+        align-self: flex-end;
+/*         height: 50%;
+        align-self: bottom; */
+    }
+    #head-wrapper{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .strat-planning{
+        flex-direction: row;
+    }
+    .purplecol{
+        align-self: flex-end;
+    }
+    .purplecol2{
+        padding-right: 3em;
+    }
 }
